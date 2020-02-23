@@ -7,6 +7,15 @@
 
 ##  app/Http/Controllers/Auth/LoginController.php
 
+** Name Space
+
+    use Illuminate\Http\Request;
+    use App\User;
+    use Illuminate\Support\Facades\Log;
+    use Illuminate\Support\Facades\Auth;
+    use Illuminate\Support\Facades\Redirect;
+
+
      public function login(Request $request){
         Log::info($request);
         if(Auth::attempt(['mobile' => request('mobile'), 'password' => request('password')])){
